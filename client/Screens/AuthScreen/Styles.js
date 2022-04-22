@@ -9,9 +9,7 @@ export default StyleSheet.create({
   },
   fields: {
     marginLeft: 'auto',
-    marginRight: 'auto',
-    // marginBottom: 125
-    // marginBottom: 70
+    marginRight: 'auto'
   },
   field: {
     backgroundColor: 'white',
