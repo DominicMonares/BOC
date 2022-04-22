@@ -46,7 +46,8 @@ export default StyleSheet.create({
   socialButton: {
     width: 300,
     height: 50,
-    borderRadius: 10
+    borderRadius: 10,
+    borderWidth: 1
   },
   socialInner: {
     flexDirection: 'row',

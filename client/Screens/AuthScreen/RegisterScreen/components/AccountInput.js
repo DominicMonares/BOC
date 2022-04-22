@@ -147,21 +147,21 @@ export default function AccountInput() {
     <View style={styles.fields}>
       <Text style={styles.fieldLabels}>Username</Text>
       <TextInput
-        style={styles.field}
+        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-username"
         onChangeText={text => setUsername(text)}
         autoCapitalize="none"
       />
       <Text style={styles.fieldLabels}>Email Address</Text>
       <TextInput
-        style={styles.field}
+        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-email"
         onChangeText={text => setEmail(text)}
         autoCapitalize="none"
       />
       <Text style={styles.fieldLabels}>Password</Text>
       <TextInput
-        style={styles.field}
+        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-pw1"
         onChangeText={text => setPassword(text)}
         secureTextEntry={true}
@@ -169,7 +169,7 @@ export default function AccountInput() {
       />
       <Text style={styles.fieldLabels}>Password Again</Text>
       <TextInput
-        style={styles.field}
+        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-pw2"
         onChangeText={text => setConfirmPw(text)}
         secureTextEntry={true}
@@ -178,7 +178,10 @@ export default function AccountInput() {
       <View style={styles.buttonContainer}>
         <Pressable
           title={'Sign Up'}
-          style={[{ backgroundColor: current.buttonColor }, styles.button]}
+          style={[
+            { backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor },
+            styles.button
+          ]}
           onPress={() => handleSignUp()}>
           <Text
             style={[{ color: current.tabIconInactive }, styles.buttonText]}>

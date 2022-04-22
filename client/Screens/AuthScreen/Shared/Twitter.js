@@ -60,7 +60,7 @@ export default function Twitter() {
   return (
     <View style={styles.twitterContainer}>
       <Pressable
-        style={[{ backgroundColor: current.buttonColor }, styles.socialButton]}
+        style={[{ backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor }, styles.socialButton]}
         title="Register with Twitter"
         accessibilityLabel="twitter"
         onPress={ () => _openAuthSessionAsync() }>

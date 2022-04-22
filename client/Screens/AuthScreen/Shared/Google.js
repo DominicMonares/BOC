@@ -61,7 +61,7 @@ export default function Google() {
   return (
     <View style={styles.googleContainer}>
       <Pressable
-        style={[{ backgroundColor: current.buttonColor }, styles.socialButton]}
+        style={[{ backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor }, styles.socialButton]}
         title="Register with Google"
         onPress={ () => _openAuthSessionAsync() }>
         <View
