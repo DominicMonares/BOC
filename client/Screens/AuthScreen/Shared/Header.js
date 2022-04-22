@@ -16,7 +16,10 @@ export default function Header() {
 
   return (
     <View style={[
-      { backgroundColor: current.navColor, borderColor: current.buttonBorderColor },
+      {
+        backgroundColor: current.navColor,
+        borderColor: current.buttonBorderColor
+      },
       styles.header
     ]} />
   )
