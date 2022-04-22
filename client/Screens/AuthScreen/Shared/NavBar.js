@@ -25,11 +25,17 @@ export default function NavBar() {
   });
 
   return (
-    <View style={[{ backgroundColor: current.navColor }, styles.loginBar]}>
+    <View style={[
+        {
+          backgroundColor: current.navColor,
+          borderTopColor: current.buttonBorderColor
+        },
+        styles.loginBar
+      ]}>
       <View style={styles.icon}>
         <FontAwesome5
           name='door-open'
-          size={50}
+          size={40}
           color={current.tabIconInactive}
           onPress={() => dispatch(guestAuth())}
         />

@@ -6,15 +6,16 @@ export default StyleSheet.create({
     borderWidth: 1
   },
   loginBar: {
-    height: 90
+    height: 90,
+    borderTopWidth: 1
   },
   icon: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 8
   },
   loginText: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
     fontFamily: 'comicSans'
   },
