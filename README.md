@@ -54,7 +54,7 @@ Key Contributors (In alphabetical order)
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/DominicMonares">@DominicMonares</a> <br>
 
   :boy: <b>Glen Li</b> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/yytt77”>@yytt77</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/yytt77">@yytt77</a> <br>
 
   :woman: <b>Jenya Rusinova</b> <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/jenrusinova">@jenrusinova</a> <br>
