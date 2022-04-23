@@ -108,7 +108,7 @@ export default function DiscoverScreen({ navigation }) {
       styles.discoverScreenContainer,
       {
         backgroundColor: palette(state.theme).pageColor,
-        borderColor: palette(state.theme).buttonBorderColor
+        borderColor: palette(state.theme).headerBorder
       }
      ]}>
       <View>

@@ -2,12 +2,10 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   header: {
-    height: 50,
-    // borderWidth: 1
+    height: 50
   },
   loginBar: {
-    height: 90,
-    // borderTopWidth: 1
+    height: 90
   },
   icon: {
     flex: 1,
@@ -20,7 +18,8 @@ export default StyleSheet.create({
     fontFamily: 'comicSans'
   },
   top: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    borderTopWidth: 1
   },
   backButton: {
     flex: 1,
