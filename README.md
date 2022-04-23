@@ -61,7 +61,7 @@ Key Contributors (In alphabetical order)
 
   :boy: <b>Joseph Nahm</b> <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/Joenahm1937">@Joenahm1937</a> <br>
-
+  
   :boy: <b>Troy Yang</b> <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/troyqyang”>@toryqyang</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/troyqyang">@toryqyang</a> <br> 
 </p>
