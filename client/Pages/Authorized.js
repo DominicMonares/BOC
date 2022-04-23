@@ -63,7 +63,12 @@ export default function Authorized() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          headerStyle: { height: 50, backgroundColor: palette(state.theme).navColor },
+          headerStyle: {
+            height: 50,
+            backgroundColor: palette(state.theme).navColor,
+            borderBottomWidth: 1,
+            borderBottomColor: palette(state.theme).headerBorder
+          },
           tabBarShowLabel: true,
           tabBarStyle: {
             ...styles.tabBarStyle,
