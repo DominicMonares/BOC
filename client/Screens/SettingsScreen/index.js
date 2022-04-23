@@ -22,6 +22,40 @@ export default function SettingsScreen() {
   const { updateProfilePhoto, updateColorScheme, logout } = bindActionCreators(actions, dispatch);
 
   const [modalVisible, setModalVisible] = useState(false);
+  const [notifications, setNotifications] = useState(
+    [{
+        "_id": 0,
+        "fromuser": "glen",
+        "to" : "joe",
+        "url" : "https://placeimg.com/100/100/animals",
+        "caption": "hello world",
+        "createdAt" : "2022-04-14T21:07:14.225Z",
+      },
+      {
+        "_id": 1,
+        "fromuser": "troy",
+        "to": "ash",
+        "url": "https://placeimg.com/100/100/animals",
+        "caption": "new pet",
+        "createdAt": "2022-04-14T22:07:14.225Z",
+      },
+      {
+        "_id": 2,
+        "fromuser": "dominic",
+        "to": "jenya",
+        "url": "https://placeimg.com/100/100/animals",
+        "caption": "d tempor incididunt ut labore et dolore magna al",
+        "createdAt": "2022-04-14T23:07:14.225Z",
+      },
+      {
+        "_id": 3,
+        "fromuser" : "jenya",
+        "to" : "dominic",
+        "url" : "https://placeimg.com/100/100/animals",
+        "caption": "bus pulvinar elementum integer ",
+        "createdAt" : "2022-04-14T24:07:14.225Z",
+      }]
+  );
 
   const isLessThanTenMB = (fileSize: number, smallerThanSizeMB: number) => {
     const isOk = fileSize / 1024 / 1024 < smallerThanSizeMB
@@ -89,7 +123,7 @@ export default function SettingsScreen() {
             baseURL: 'http://54.215.206.56',
             url: '/user/profPhoto',
             data: {
-              username: 'troyqyang',
+              username: state.user.userInfo.username,
               profPhoto: profPhotoUrl
             }
           }).then(result => {
@@ -103,56 +137,6 @@ export default function SettingsScreen() {
         console.error('Error:', error);
       });
     }
-  }
-
-  const getNotificationData = () => {
-    const defaultData = [
-      {
-        "_id": 0,
-        "fromuser": "glen",
-        "to" : "joe",
-        "url" : "https://placeimg.com/100/100/animals",
-        "caption": "hello world",
-        "createdAt" : "2022-04-14T21:07:14.225Z",
-      },
-      {
-        "_id": 1,
-        "fromuser": "troy",
-        "to": "ash",
-        "url": "https://placeimg.com/100/100/animals",
-        "caption": "new pet",
-        "createdAt": "2022-04-14T22:07:14.225Z",
-      },
-      {
-        "_id": 2,
-        "fromuser": "dominic",
-        "to": "jenya",
-        "url": "https://placeimg.com/100/100/animals",
-        "caption": "d tempor incididunt ut labore et dolore magna al",
-        "createdAt": "2022-04-14T23:07:14.225Z",
-      },
-      {
-        "_id": 3,
-        "fromuser" : "jenya",
-        "to" : "dominic",
-        "url" : "https://placeimg.com/100/100/animals",
-        "caption": "bus pulvinar elementum integer ",
-        "createdAt" : "2022-04-14T24:07:14.225Z",
-      }
-    ];
-    axios({
-      method: 'get',
-      // baseURL: 'http://localhost:3000',
-      baseURL: 'http://54.215.206.56',
-      url: '/post/discover?limit=2&offset=0',
-      params: { username: state.user.userInfo.username }
-    }).then(result => {
-      console.log('Success: ', result);
-      return result;
-    }).catch(err => {
-      console.log(`Error getting notifications: ${err}`);
-      return defaultData;
-    })
   }
 
   return (
@@ -185,7 +169,14 @@ export default function SettingsScreen() {
               borderColor: palette(state.theme).buttonBorderColor
             }
           ]}
-          onPress={() => {
+          onPress={ async () => {
+            let result = await axios({
+              method: 'get',
+              url: 'http://54.215.206.56/user/notifications',
+              params: { touser: state.user.userInfo.username }
+            });
+            setNotifications(result.data);
+            console.log(notifications);
             setModalVisible(true);
           }}
           underlayColor='#FFF'>
@@ -222,7 +213,7 @@ export default function SettingsScreen() {
                   style={[styles.exit]}
                 ></Image>
               </Pressable>
-              <NotificationTile data={getNotificationData()}/>
+              <NotificationTile data={notifications}/>
             </View>
           </View>
         </Modal>
@@ -239,7 +230,7 @@ export default function SettingsScreen() {
               borderColor: palette(state.theme).buttonBorderColor
             }
           ]}
-          onPress={() => {
+          onPress={async () => {
             updateColorScheme();
           }}
           underlayColor='#FFF'>
