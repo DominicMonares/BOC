@@ -318,7 +318,13 @@ export default function Upload({ navigation }) {
               <Image
                 source={require("../../assets/x.png")}
                 fadeDuration={0}
-                style={{ width: 20, height: 20, marginLeft: 300 }}
+                style={{
+                  width: 20,
+                  height: 20,
+                  position: 'absolute',
+                  top: -15,
+                  right: -15
+                }}
               />
             </Pressable>
             <Pressable
@@ -337,7 +343,7 @@ export default function Upload({ navigation }) {
                 {
                   color: palette(state.theme).buttonText
                 }
-              ]}>Pick From Photos Gallary</Text>
+              ]}>Pick From Photos Gallery</Text>
             </Pressable>
             <Pressable
               style={[
@@ -355,7 +361,7 @@ export default function Upload({ navigation }) {
                 {
                   color: palette(state.theme).buttonText,
                 }
-              ]}>Pick From Camera roll</Text>
+              ]}>Take a Photo</Text>
             </Pressable>
           </View>
         </View>
