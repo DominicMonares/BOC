@@ -144,7 +144,7 @@ export default function AccountInput() {
   }
 
   return (
-    <View style={styles.fields}>
+    <View style={styles.registerFields}>
       <Text style={styles.fieldLabels}>Username</Text>
       <TextInput
         style={[{ borderColor: current.buttonBorderColor }, styles.field]}
