@@ -29,3 +29,16 @@ PetPix is an application that allows users to create profiles and post pictures 
     - Ability to logout
   6. User Profile
     - Similar functionality to Discover/Home page with the main difference being that all posts will be yours only
+
+
+How to start the application:
+
+Using a Mac:
+  1. Run "npm install"
+  2. Run "npm start"
+  3. Press "i" to start iOS simulator
+
+Using Linux or Windows:
+  1. Read the official documentation: https://docs.expo.dev/get-started/create-a-new-app/ 
+
+
