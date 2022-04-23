@@ -8,9 +8,7 @@ import UnAuthorized from "./UnAuthorized";
 // replace return statement w/ Authorized to bypass
 const App = function() {
   const user = useSelector(state => state.user);
-  const [fontsLoaded] = useFonts({
-    comicSans: require('../assets/fonts/comic.ttf')
-  });
+  console.log(user.userInfo.username)
 
   return (
     user.username ? (
