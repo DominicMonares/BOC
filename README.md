@@ -45,6 +45,10 @@ Using Linux or Windows:
   1. Read the official documentation: https://docs.expo.dev/get-started/create-a-new-app/ 
 
 
+License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Key Contributors (In alphabetical order)
 <p>
   :boy: <b>Ash Tsai</b> <br>
