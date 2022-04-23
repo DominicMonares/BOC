@@ -65,8 +65,8 @@ describe('Login', () => {
 
   })
 
-  xit('should correctly change login and password', () => {
-    const Account = create(
+    xit('should correctly change login and password', () => {
+      const Account = create(
       <Provider store={store}>
         <AccountInput />
       </Provider>
@@ -76,11 +76,6 @@ describe('Login', () => {
     fireEvent.press(getByText('SignUp'));
     const tree = Account.toJSON();
     //console.log(tree);
-
-
-})
-
-
-})
-
+    })
+  })
 })
