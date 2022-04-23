@@ -77,6 +77,7 @@ export default function Authorized() {
           },
           tabBarActiveTintColor: palette(state.theme).tabIconActive,
           tabBarInactiveTintColor: palette(state.theme).tabIconInactive,
+          tabBarLabelStyle: { fontFamily: 'comicSans' }
         })}
       >
         <Tab.Screen
