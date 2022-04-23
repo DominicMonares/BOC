@@ -23,20 +23,21 @@ export default function AccountInput() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPw, setConfirmPw] = useState('');
-  const [invalidUsername, setInvalidUsername] = useState(<></>);
-  const [invalidEmail, setInvalidEmail] = useState(<></>);
-  const [invalidPassword, setInvalidPassword] = useState(<></>);
-  const [passwordLength, setPasswordLength] = useState(<></>);
-  const [passwordCaptial, setPasswordCapital] = useState(<></>);
-  const [passwordNum, setPasswordNum] = useState(<></>);
-  const [passwordSpecial, setPasswordSpecial] = useState(<></>);
+  const [invalidUsername, setInvalidUsername] = useState('');
+  const [invalidEmail, setInvalidEmail] = useState('');
+  const [invalidPassword, setInvalidPassword] = useState('');
+  const [passwordLength, setPasswordLength] = useState('');
+  const [passwordCaptial, setPasswordCapital] = useState('');
+  const [passwordNum, setPasswordNum] = useState('');
+  const [passwordSpecial, setPasswordSpecial] = useState('');
+
+  const [errors, setErrors] = useState([]);
 
   const [fontsLoaded] = useFonts({
     comicSans: require('../../../../assets/fonts/comic.ttf')
   });
 
   const handleSignUp = async () => {
-
     let validatedUsername = validUsername(username);
     let validatedEmail = validEmail(email);
     let validatedPasswords = validPassword(password, confirmPw);
@@ -54,19 +55,33 @@ export default function AccountInput() {
         dispatch(authLog());
         alert('We\'ve sent you an activation email!\nPlease check your inbox.');
       } catch (err) {
-        console.log(err);
+        alert('Registration failed.');
       }
+    } else {
+      alert(errorMessages())
     }
+  }
+
+  const errorMessages = () => {
+    let alertErrors = [];
+    if (invalidUsername) { alertErrors.push(invalidUsername) }
+    if (invalidEmail) { alertErrors.push(invalidEmail) }
+    if (invalidPassword) { alertErrors.push(invalidPassword) }
+    if (passwordLength) { alertErrors.push(passwordLength) }
+    if (passwordCaptial) { alertErrors.push(passwordCaptial) }
+    if (passwordNum) { alertErrors.push(passwordNum) }
+    if (passwordSpecial) { alertErrors.push(passwordSpecial) }
+    return alertErrors.join('\n');
   }
 
   const validUsername = (username) => {
     let letters = username.split('');
 
     if (username.length >= 2 && username.length <= 16) {
-      setInvalidUsername(<></>);
+      setInvalidUsername('');
       return true;
     } else {
-      setInvalidUsername(<Text>Username must be between 2 and 16 characters long.</Text>);
+      setInvalidUsername('Username must be between 2 and 16 characters long.');
       return false;
     }
   }
@@ -80,24 +95,24 @@ export default function AccountInput() {
       let rightMatch = right <= 2 && right > 0;
 
       if (leftMatch && rightMatch) {
-        setInvalidEmail(<></>);
+        setInvalidEmail('');
         return true;
       } else {
-        setInvalidEmail(<Text>Invalid email format.</Text>);
+        setInvalidEmail('• Invalid email format.');
         return false;
       }
     } else {
-      setInvalidEmail(<Text>Invalid email format.</Text>);
+      setInvalidEmail('• Invalid email format.');
       return false;
     }
   }
 
   const validPassword = (pw1, pw2) => {
     if (pw1 === pw2) {
-      setInvalidPassword(<></>)
+      setInvalidPassword('')
       return true;
     } else {
-      setInvalidPassword(<Text>Passwords do not match.</Text>)
+      setInvalidPassword('• Passwords do not match.')
       return false;
     }
   }
@@ -109,27 +124,27 @@ export default function AccountInput() {
     let special = containsSpecial(pw);
 
     if (!length) {
-      setPasswordLength(<Text>Password must contain at least 8 characters.</Text>);
+      setPasswordLength('• Password must contain at least 8 characters.');
     } else {
-      setPasswordLength(<></>);
+      setPasswordLength('');
     }
 
     if (!capital) {
-      setPasswordCapital(<Text>Password must contain at least 1 capital letter.</Text>);
+      setPasswordCapital('• Password must contain at least 1 capital letter.');
     } else {
-      setPasswordCapital(<></>);
+      setPasswordCapital('');
     }
 
     if (!num) {
-      setPasswordNum(<Text>Password must contain at least 1 number.</Text>);
+      setPasswordNum('• Password must contain at least 1 number.');
     } else {
-      setPasswordNum(<></>);
+      setPasswordNum('');
     }
 
     if (!special) {
-      setPasswordSpecial(<Text>Password must contain at least 1 special character.</Text>);
+      setPasswordSpecial('• Password must contain at least 1 special character.');
     } else {
-      setPasswordSpecial(<></>);
+      setPasswordSpecial('');
     }
 
     if (length && capital && num && special) {
@@ -183,13 +198,6 @@ export default function AccountInput() {
           </Text>
         </Pressable>
       </View>
-      {invalidUsername}
-      {invalidEmail}
-      {passwordLength}
-      {passwordCaptial}
-      {passwordNum}
-      {passwordSpecial}
-      {invalidPassword}
     </View>
   )
 }
