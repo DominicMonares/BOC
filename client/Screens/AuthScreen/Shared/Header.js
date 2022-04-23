@@ -8,6 +8,9 @@ export default function Header() {
   const state = useSelector(state => state);
   let theme = palette(state.theme)
   return (
-    <View style={[{ backgroundColor: theme.navColor }, styles.header]} />
+    <View style={[
+      { backgroundColor: theme.navColor, borderBottomColor: theme.headerBorder },
+      styles.header
+    ]} />
   )
 }
