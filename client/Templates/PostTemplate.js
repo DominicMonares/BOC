@@ -76,7 +76,7 @@ const PostTemplate = (props) => {
         </View>;
 
   return (
-    <View style={styles.container}>
+    <View style={[{ borderColor: palette(state.theme).buttonBorderColor }, styles.container]}>
       <Modal
         style={styles.modalContainer}
         animationType = {'slide'}
@@ -193,8 +193,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: 'black',
     backgroundColor: 'white',
+    marginBottom: 10
   },
   userInfoContainer: {
     flex: 1,
