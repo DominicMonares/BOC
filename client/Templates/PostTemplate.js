@@ -73,18 +73,24 @@ const PostTemplate = (props) => {
             source={{
               uri: `${props.data.profPhoto}`,
             }}/>
-        </View>;
+    </View>;
 
   return (
-    <View style={[{ borderColor: palette(state.theme).buttonBorderColor }, styles.container]}>
+    <View style={[
+      {
+        backgroundColor: palette(state.theme).postColor,
+        borderColor: palette(state.theme).buttonBorderColor
+      },
+      styles.container
+    ]}>
       <Modal
         style={styles.modalContainer}
-        animationType = {'slide'}
+        animationType={'slide'}
         transparent={false}
         visible={isVisible}>
         <View
-        style={[styles.modalComponentContainer,
-          {
+          style={[styles.modalComponentContainer,
+            {
             backgroundColor: palette(state.theme).pageColor
           }]}>
           <View
@@ -199,7 +205,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    backgroundColor: 'white',
     marginBottom: 10
   },
   userInfoContainer: {
