@@ -45,7 +45,7 @@ Using Linux or Windows:
   1. Read the official documentation: https://docs.expo.dev/get-started/create-a-new-app/ 
 
 
-Key Contributors
+Key Contributors (In alphabetical order)
 <p>
   :boy: <b>Ash Tsai</b> <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/ashtsai14">@ashtsai14</a> <br>
