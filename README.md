@@ -34,18 +34,18 @@ PetPix is an application that allows users to create profiles and post pictures 
 
 
 
-How to start the application:
+### How to start the application:
 
-Using a Mac:
+## Using a Mac:
   1. Run "npm install"
   2. Run "npm start"
   3. Press "i" to start iOS simulator
 
-Using Linux or Windows:
+## Using Linux or Windows:
   1. Read the official documentation: https://docs.expo.dev/get-started/create-a-new-app/ 
 
 
-License
+### License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
