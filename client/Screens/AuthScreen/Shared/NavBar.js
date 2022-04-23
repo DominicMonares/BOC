@@ -22,7 +22,7 @@ export default function NavBar() {
     <View style={[
         {
           backgroundColor: theme.navColor,
-          borderTopColor: theme.buttonBorderColor
+          borderTopColor: theme.headerBorder
         },
         styles.loginBar
       ]}>
