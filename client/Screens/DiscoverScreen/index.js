@@ -107,8 +107,7 @@ export default function DiscoverScreen({ navigation }) {
     <View style={[
       styles.discoverScreenContainer,
       {
-        backgroundColor: palette(state.theme).pageColor,
-        borderColor: palette(state.theme).headerBorder
+        backgroundColor: palette(state.theme).pageColor
       }
      ]}>
       <View>
@@ -125,8 +124,6 @@ export default function DiscoverScreen({ navigation }) {
 const styles = StyleSheet.create({
   discoverScreenContainer: {
     flex: 1,
-    borderTopWidth: 1,
-    borderBottomWidth: 1
   },
   baseText: {
     fontFamily: "Cochin"
