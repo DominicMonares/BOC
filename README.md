@@ -45,3 +45,23 @@ Using Linux or Windows:
   1. Read the official documentation: https://docs.expo.dev/get-started/create-a-new-app/ 
 
 
+Key Contributors
+<p>
+  :boy: <b>Ash Tsai</b> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/ashtsai14">@ashtsai14</a> <br>
+
+  :boy: <b>Dominic Mongers</b> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/DominicMonares">@DominicMonares</a> <br>
+
+  :boy: <b>Glen Li</b> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/yytt77”>@yytt77</a> <br>
+
+  :woman: <b>Jenya Rusinova</b> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/jenrusinova">@jenrusinova</a> <br>
+
+  :boy: <b>Joseph Nahm</b> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/Joenahm1937">@Joenahm1937</a> <br>
+
+  :boy: <b>Troy Yang</b> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GitHub: <a href="https://github.com/troyqyang”>@toryqyang</a> <br>
+</p>
