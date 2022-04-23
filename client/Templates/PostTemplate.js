@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, ScrollView, Modal, StyleSheet, Image, Dimensions, TouchableOpacity, TextInput, Button } from 'react-native';
 import { useSelector, useStore, useDispatch } from "react-redux";
+import { FontAwesome5, FontAwesome } from "@expo/vector-icons";
 import moment from 'moment';
 import axios from "axios";
 
@@ -54,6 +55,25 @@ const PostTemplate = (props) => {
         console.log(error);
       });
   }
+
+  let ProfPhoto = (!props.data.profPhoto) ?
+    <View
+      // style={[styles.noProfileImage, { backgroundColor: searchIconColor }]}
+      style={styles.profileContainer }
+      >
+      <FontAwesome5
+        name="user-alt"
+        size={20}
+        color="grey"
+      ></FontAwesome5>
+    </View> : <View style ={styles.profileContainer}>
+          <Image
+            style={styles.profileImage}
+            resizeMode='cover'
+            source={{
+              uri: `${props.data.profPhoto}`,
+            }}/>
+        </View>;
 
   return (
     <View style={styles.container}>
@@ -118,14 +138,15 @@ const PostTemplate = (props) => {
         </View>
       </Modal>
       <View style={styles.userInfoContainer}>
-        <View style ={styles.profileContainer}>
+        {/* <View style ={styles.profileContainer}>
           <Image
             style={styles.profileImage}
             resizeMode='cover'
             source={{
               uri: `${props.data.profPhoto}`,
             }}/>
-        </View>
+        </View> */}
+        {ProfPhoto}
         <View style={styles.postInfoContainer}>
           <View style={styles.usernameContainer}>
             <Text style={styles.userNameText}>{props.data.username}</Text>
