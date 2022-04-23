@@ -73,18 +73,24 @@ const PostTemplate = (props) => {
             source={{
               uri: `${props.data.profPhoto}`,
             }}/>
-        </View>;
+    </View>;
 
   return (
-    <View style={styles.container}>
+    <View style={[
+      {
+        backgroundColor: palette(state.theme).postColor,
+        borderColor: palette(state.theme).buttonBorderColor
+      },
+      styles.container
+    ]}>
       <Modal
         style={styles.modalContainer}
-        animationType = {'slide'}
+        animationType={'slide'}
         transparent={false}
         visible={isVisible}>
         <View
-        style={[styles.modalComponentContainer,
-          {
+          style={[styles.modalComponentContainer,
+            {
             backgroundColor: palette(state.theme).pageColor
           }]}>
           <View
@@ -180,7 +186,13 @@ const PostTemplate = (props) => {
         onPress={() => {
           displayModal(!isVisible)
       }}>
-        <Text> {props.data.comments.length} Comments</Text>
+        <Text style={
+          [
+            { color: palette(state.theme).commentButtonText },
+            styles.commentButtonText
+          ]}>
+          {props.data.comments.length} Comments
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -193,8 +205,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: 'black',
-    backgroundColor: 'white',
+    marginBottom: 10
   },
   userInfoContainer: {
     flex: 1,
@@ -213,6 +224,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   captionText: {
+    fontFamily: 'comicSans'
   },
   postContentContainer: {
     flex: 2,
@@ -250,10 +262,17 @@ const styles = StyleSheet.create({
   },
   userNameText: {
     fontWeight: 'bold',
+    fontFamily: 'comicSans'
   },
   locationDateText: {
     fontSize: 10,
+    fontFamily: 'comicSans'
   },
+  commentButtonText: {
+    fontFamily: 'comicSans',
+    fontSize: 12
+  },
+
   // <--------------------Modal CSS--------------------->
   modalContainer: {
   },
@@ -281,6 +300,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     color: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
   modalCommentContainer: {
     paddingLeft: 10,
@@ -304,6 +324,7 @@ const styles = StyleSheet.create({
     // width: width,
     // height: width/2,
     backgroundColor: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
 })
 

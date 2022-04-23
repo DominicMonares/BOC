@@ -3,11 +3,11 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   header: {
     height: 50,
-    // borderWidth: 1
+    borderBottomWidth: 1
   },
   loginBar: {
     height: 90,
-    // borderTopWidth: 1
+    borderTopWidth: 1
   },
   icon: {
     flex: 1,

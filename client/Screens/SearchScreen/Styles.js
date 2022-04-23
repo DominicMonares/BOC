@@ -13,6 +13,7 @@ const SearchBar = StyleSheet.create({
     backgroundColor: "rgba(0, 0, 0, 0.1)",
     color: "white",
     borderRadius: 50,
+    fontFamily: 'comicSans'
   },
 });
 
@@ -68,6 +69,7 @@ const Item = StyleSheet.create({
   },
   clear: {
     color: "red",
+    fontFamily: 'comicSans'
   },
   item: {
     padding: 15,
@@ -129,6 +131,7 @@ const Loading = StyleSheet.create({
   },
   text: {
     padding: 15,
+    fontFamily: 'comicSans'
   },
 });
 

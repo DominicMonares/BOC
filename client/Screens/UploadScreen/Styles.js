@@ -39,18 +39,22 @@ module.exports = StyleSheet.create({
   header: {
     fontSize: 25,
     textAlign: 'center',
+    fontFamily: 'comicSans'
   },
   caption: {
     fontSize: 15,
     padding: 10,
     left: 45,
     marginTop: 20,
+    fontFamily: 'comicSans'
   },
   locationCaption: {
     color: '#FFFFFF',
     fontSize: 15,
     padding: 10,
     textAlign: 'center',
+    fontFamily: 'comicSans',
+    marginTop: -3
   },
   checkbox: {
     margin: 8,
@@ -73,7 +77,8 @@ module.exports = StyleSheet.create({
     fontSize: 15,
     borderRadius:10,
     alignSelf: 'center',
-    textAlignVertical: 'top'
+    textAlignVertical: 'top',
+    fontFamily: 'comicSans'
   },
   post: {
     textAlign:'center',
@@ -81,6 +86,7 @@ module.exports = StyleSheet.create({
     paddingLeft : 10,
     paddingRight : 10,
     fontSize: 20,
+    fontFamily: 'comicSans'
   },
   postButton: {
     height: 60,
@@ -97,6 +103,7 @@ module.exports = StyleSheet.create({
     justifyContent: 'center',
   },
   textStyle: {
+    fontFamily: 'comicSans'
   },
   logoImage: {
     width: 75,

@@ -4,22 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { lightTheme, darkTheme } from '../../../constants';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
+import { palette } from '../../../Utils/ColorScheme';
 
 import styles from './Styles'
 import { guestAuth } from '../../../Redux/actions';
 
 export default function NavBar() {
-  const theme = useSelector(state => state.theme);
+  const state = useSelector(state => state);
   const guestHome = useSelector(state => state.guestHome);
+  let theme = palette(state.theme);
   const dispatch = useDispatch();
-  const [current, setCurrent] = useState(() => {
-    if (theme) {
-      return lightTheme;
-    } else {
-      return darkTheme;
-    }
-  });
-
   const [fontsLoaded] = useFonts({
     comicSans: require('../../../assets/fonts/comic.ttf')
   });
@@ -27,8 +21,8 @@ export default function NavBar() {
   return (
     <View style={[
         {
-          backgroundColor: current.navColor,
-          borderTopColor: current.buttonBorderColor
+          backgroundColor: theme.navColor,
+          borderTopColor: theme.headerBorder
         },
         styles.loginBar
       ]}>
@@ -36,11 +30,11 @@ export default function NavBar() {
         <FontAwesome5
           name='door-open'
           size={40}
-          color={current.tabIconInactive}
+          color={theme.tabIconInactive}
           onPress={() => dispatch(guestAuth())}
         />
         <Text
-          style={[{ color: current.iconColor }, styles.loginText]}
+          style={[{ color: theme.iconColor }, styles.loginText]}
           onPress={() => dispatch(guestAuth())}>
           Log In
         </Text>

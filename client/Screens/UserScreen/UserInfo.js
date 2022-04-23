@@ -87,16 +87,19 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     fontWeight: 'bold',
     color: '#FEFB9F',
+    fontFamily: 'comicSans'
   },
   followersText: {
     textAlign: 'right',
     fontSize: 10,
     color: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
   followingText: {
     textAlign: 'right',
     fontSize: 10,
     color: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
 });
 

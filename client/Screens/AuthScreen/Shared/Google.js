@@ -12,7 +12,7 @@ import styles from './Styles'
 import { lightTheme, darkTheme } from '../../../constants';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
-
+import { palette } from '../../../Utils/ColorScheme';
 
 const googleRegEndpoint = `http://54.215.206.56.nip.io/oauth2/redirect/google`;
 
@@ -21,14 +21,7 @@ WebBrowser.maybeCompleteAuthSession();
 export default function Google() {
   const state = useSelector(state => state);
   const authScreen = useSelector(state => state.authScreen);
-  const theme = useSelector(state => state.theme);
-  const [current, setCurrent] = useState(() => {
-    if (theme) {
-      return lightTheme;
-    } else {
-      return darkTheme;
-    }
-  });
+  let theme = palette(state.theme)
 
   const [screen, setScreen] = useState(() => {
     if (authScreen === 'login') {
@@ -61,7 +54,7 @@ export default function Google() {
   return (
     <View style={styles.googleContainer}>
       <Pressable
-        style={[{ backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor }, styles.socialButton]}
+        style={[{ backgroundColor: theme.buttonColor, borderColor: theme.buttonBorderColor }, styles.socialButton]}
         title="Register with Google"
         onPress={ () => _openAuthSessionAsync() }>
         <View
@@ -69,10 +62,10 @@ export default function Google() {
           <FontAwesome5
             name='google'
             size={30}
-            color={current.iconColor}
+            color={theme.iconColor}
           />
           <Text
-            style={[{ color: current.tabIconInactive }, styles.socialText]}>
+            style={[{ color: theme.tabIconInactive }, styles.socialText]}>
             &nbsp;&nbsp;{screen} with Google
           </Text>
         </View>

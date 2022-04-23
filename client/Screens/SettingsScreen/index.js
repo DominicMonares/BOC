@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   button:{
-    height: 40,
+    height: 41,
     width: 240,
     marginRight: 40,
     marginLeft: 40,
@@ -283,7 +283,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign:'center',
     paddingLeft: 5,
-    paddingRight: 5
+    paddingRight: 5,
+    fontFamily: 'comicSans'
   },
   logOutButtonText: {
     fontWeight: 'bold',
@@ -291,7 +292,8 @@ const styles = StyleSheet.create({
     marginTop: 5,
     paddingLeft: 10,
     paddingRight: 10,
-    fontSize: 20
+    fontSize: 20,
+    fontFamily: 'comicSans'
   },
   logOutButton: {
     height: 60,
@@ -338,6 +340,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     textAlign: 'center',
     fontWeight: 'bold',
+    fontFamily: 'comicSans'
   },
   exit: {
     height: 20,

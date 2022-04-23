@@ -13,6 +13,9 @@ export const lightTheme = {
   searchBarColor: "rgba(255,255,255,0.3)",
   searchText: "black",
   commentBorderColor: "black",
+  commentButtonText: "#6E96BD",
+  headerBorder: "#6E96BD",
+  postColor: "#FFFFFF"
 };
 
 export const darkTheme = {
@@ -30,6 +33,9 @@ export const darkTheme = {
   searchBarColor: "rgba(0,0,0,0.3)",
   searchText: "white",
   commentBorderColor: "white",
+  commentButtonText: "#6E96BD",
+  headerBorder: "#372363",
+  postColor: "#E5E5E5"
 };
 
 // export const API_IP = "44.201.208.58:3000";

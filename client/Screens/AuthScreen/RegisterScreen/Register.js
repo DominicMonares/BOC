@@ -16,20 +16,15 @@ import NavBar from '../Shared/NavBar';
 // Styling
 import styles from '../Styles'
 import { lightTheme, darkTheme } from '../../../constants';
+import { palette } from '../../../Utils/ColorScheme';
 
 
 const RegisterScreen = function() {
-  const theme = useSelector(state => state.theme);
-  const [current, setCurrent] = useState(() => {
-    if (theme) {
-      return lightTheme;
-    } else {
-      return darkTheme;
-    }
-  })
+  const state = useSelector(state => state);
+  let theme = palette(state.theme)
 
   return (
-    <View style={[{ backgroundColor: current.pageColor }, styles.container]}>
+    <View style={[{ backgroundColor: theme.pageColor }, styles.container]}>
       <Header />
       <LogoBackButton />
       <Tabs />

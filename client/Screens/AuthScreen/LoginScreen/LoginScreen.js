@@ -13,25 +13,21 @@ import Google from '../Shared/Google';
 import Twitter from '../Shared/Twitter';
 import AccountInput from './AccountInput.js';
 import NavBar from '../Shared/NavBar';
-import PasswordInput from './PasswordInput.js';
-import ContinueButton from './ContinueButton.js';
+
 
 // Styling
 import styles from '../Styles'
 import { lightTheme, darkTheme } from '../../../constants';
-// import { palette } from '../../Utils/ColorScheme';
+import { palette } from '../../../Utils/ColorScheme';
 
 const SignInScreen = function(){
-  var theme = lightTheme;
-  // if (props.theme) {
-  //   theme = lightTheme;
-  // } else {
-  //   theme = darkTheme;
-  // }
+  const state = useSelector((state) => state);
+  let theme = palette(state.theme);
 
   return (
     <View style={[{ backgroundColor: theme.pageColor }, styles.container]}>
-      <BackButton />
+      <Header />
+      <LogoBackButton />
       <Tabs />
       <AccountInput />
       <Google />

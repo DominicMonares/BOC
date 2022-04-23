@@ -7,9 +7,14 @@ export default StyleSheet.create({
   fieldContainer: {
     flex: 1
   },
-  fields: {
+  registerFields: {
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  loginFields: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginBottom: 194.5
   },
   field: {
     backgroundColor: 'white',
