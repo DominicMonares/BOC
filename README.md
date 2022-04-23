@@ -30,6 +30,9 @@ PetPix is an application that allows users to create profiles and post pictures 
   6. User Profile
     - Similar functionality to Discover/Home page with the main difference being that all posts will be yours only
 
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/41309544/164945037-01ffd326-cec1-40ee-856e-03646c27026f.gif)![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/41309544/164944969-f7b618f0-d960-485c-842e-df23da49d08d.gif)![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/41309544/164944978-f3c7e84b-f7d8-40c6-b16b-86ec2f24f66b.gif)![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/41309544/164944989-ab82bf92-ab16-4f13-a609-dc5c8fc0864f.gif)
+
+
 
 How to start the application:
 
