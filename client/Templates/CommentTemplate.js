@@ -115,16 +115,19 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 17,
     color: '#FEFB9F',
+    fontFamily: 'comicSans'
   },
   dateText: {
     fontSize: 10,
     color: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
   commentTextContainer: {
     paddingTop: 5,
   },
   commentText: {
     color: '#FDFEFE',
+    fontFamily: 'comicSans'
   }
 });
 

@@ -180,7 +180,13 @@ const PostTemplate = (props) => {
         onPress={() => {
           displayModal(!isVisible)
       }}>
-        <Text> {props.data.comments.length} Comments</Text>
+        <Text style={
+          [
+            { color: palette(state.theme).commentButtonText },
+            styles.commentButtonText
+          ]}>
+          {props.data.comments.length} Comments
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -213,6 +219,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   captionText: {
+    fontFamily: 'comicSans'
   },
   postContentContainer: {
     flex: 2,
@@ -250,10 +257,17 @@ const styles = StyleSheet.create({
   },
   userNameText: {
     fontWeight: 'bold',
+    fontFamily: 'comicSans'
   },
   locationDateText: {
     fontSize: 10,
+    fontFamily: 'comicSans'
   },
+  commentButtonText: {
+    fontFamily: 'comicSans',
+    fontSize: 12
+  },
+
   // <--------------------Modal CSS--------------------->
   modalContainer: {
   },
@@ -281,6 +295,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 20,
     color: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
   modalCommentContainer: {
     paddingLeft: 10,
@@ -304,6 +319,7 @@ const styles = StyleSheet.create({
     // width: width,
     // height: width/2,
     backgroundColor: '#FDFEFE',
+    fontFamily: 'comicSans'
   },
 })
 

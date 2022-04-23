@@ -13,6 +13,7 @@ export const lightTheme = {
   searchBarColor: "rgba(255,255,255,0.3)",
   searchText: "black",
   commentBorderColor: "black",
+  commentButtonText: "#6E96BD",
   headerBorder: "#6E96BD"
 };
 
@@ -31,6 +32,7 @@ export const darkTheme = {
   searchBarColor: "rgba(0,0,0,0.3)",
   searchText: "white",
   commentBorderColor: "white",
+  commentButtonText: "#6E96BD",
   headerBorder: "#372363"
 };
 
