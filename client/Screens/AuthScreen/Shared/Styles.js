@@ -1,16 +1,21 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
+  header: {
+    height: 50,
+    // borderWidth: 1
+  },
   loginBar: {
-    height: 90
+    height: 90,
+    // borderTopWidth: 1
   },
   icon: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 8
   },
   loginText: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
     fontFamily: 'comicSans'
   },
@@ -46,7 +51,8 @@ export default StyleSheet.create({
   socialButton: {
     width: 300,
     height: 50,
-    borderRadius: 10
+    borderRadius: 10,
+    borderWidth: 1
   },
   socialInner: {
     flexDirection: 'row',

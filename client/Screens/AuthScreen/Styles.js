@@ -9,9 +9,7 @@ export default StyleSheet.create({
   },
   fields: {
     marginLeft: 'auto',
-    marginRight: 'auto',
-    // marginBottom: 125
-    // marginBottom: 70
+    marginRight: 'auto'
   },
   field: {
     backgroundColor: 'white',
@@ -23,7 +21,8 @@ export default StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     fontSize: 16,
-    fontFamily: 'comicSans'
+    fontFamily: 'comicSans',
+    borderWidth: 1
   },
   fieldLabels: {
     color: 'white',
@@ -43,7 +42,8 @@ export default StyleSheet.create({
     height: 50,
     marginTop: 20,
     marginBottom: 30,
-    borderRadius: 10
+    borderRadius: 10,
+    borderWidth: 1
   },
   buttonText: {
     fontSize: 20,

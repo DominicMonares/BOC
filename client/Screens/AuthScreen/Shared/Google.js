@@ -14,7 +14,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 
 
-const googleRegEndpoint = `http://${API_IP}/user/login/federated/google`;
+const googleRegEndpoint = `http://54.215.206.56.nip.io/oauth2/redirect/google`;
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -61,7 +61,7 @@ export default function Google() {
   return (
     <View style={styles.googleContainer}>
       <Pressable
-        style={[{ backgroundColor: current.buttonColor }, styles.socialButton]}
+        style={[{ backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor }, styles.socialButton]}
         title="Register with Google"
         onPress={ () => _openAuthSessionAsync() }>
         <View

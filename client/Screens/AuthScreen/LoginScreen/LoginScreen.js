@@ -1,39 +1,36 @@
-//import { Text, View, Image } from 'react-native';
-
+// React | Redux
 import { useState } from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import PetPixLogo from '../../../Templates/PetPixLogo';
+// Components
+import Header from '../Shared/Header';
+import LogoBackButton from '../Shared/LogoBackButton';
 import Tabs from '../Shared/Tabs';
 
+import BackButton from '../Shared/BackButton';
 import Google from '../Shared/Google';
 import Twitter from '../Shared/Twitter';
-import BackButton from '../Shared/BackButton';
-
 import AccountInput from './AccountInput.js';
+import NavBar from '../Shared/NavBar';
+import PasswordInput from './PasswordInput.js';
+import ContinueButton from './ContinueButton.js';
 
-import Logo from '../../../assets/logo_small.png';
-
-
-//import { Register as styles } from '..RegisterScreen/Styles'
+// Styling
 import styles from '../Styles'
+import { lightTheme, darkTheme } from '../../../constants';
+// import { palette } from '../../Utils/ColorScheme';
 
-import { lightTheme, darkTheme } from '../../../constants.js';
-
-
-const SignInScreen = function(props){
-  var theme;
-  if (props.theme) {
-    theme = lightTheme;
-  } else {
-    theme = darkTheme;
-  }
-
+const SignInScreen = function(){
+  var theme = lightTheme;
+  // if (props.theme) {
+  //   theme = lightTheme;
+  // } else {
+  //   theme = darkTheme;
+  // }
 
   return (
     <View style={[{ backgroundColor: theme.pageColor }, styles.container]}>
-      <PetPixLogo />
       <BackButton />
       <Tabs />
       <AccountInput />
@@ -43,10 +40,4 @@ const SignInScreen = function(props){
   )
 }
 
-const mapStateToProps = (state) => ({
-  theme: state.theme
-})
-
-export default connect(mapStateToProps, null)(SignInScreen);
-
-
+export default SignInScreen;

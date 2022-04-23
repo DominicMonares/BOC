@@ -2,14 +2,14 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   headerStyle: {
-    height: 50
+    height: 50,
+    borderWidth: 1
   },
   tabBarStyle: {
     height: 90,
     paddingHorizontal: 20,
     paddingVertical: 20,
-    color: "#FEFB9F",
-    borderRadius: 4,
+    color: "#FEFB9F"
   },
   uploadCircle: {
     width: 50,
