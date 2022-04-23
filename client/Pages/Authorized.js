@@ -73,6 +73,7 @@ export default function Authorized() {
           tabBarStyle: {
             ...styles.tabBarStyle,
             backgroundColor: palette(state.theme).navColor,
+            borderTopColor: palette(state.theme).headerBorder
           },
           tabBarActiveTintColor: palette(state.theme).tabIconActive,
           tabBarInactiveTintColor: palette(state.theme).tabIconInactive,

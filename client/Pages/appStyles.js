@@ -9,7 +9,8 @@ export default StyleSheet.create({
     height: 90,
     paddingHorizontal: 20,
     paddingVertical: 20,
-    color: "#FEFB9F"
+    color: "#FEFB9F",
+    borderTopWidth: 1
   },
   uploadCircle: {
     width: 50,

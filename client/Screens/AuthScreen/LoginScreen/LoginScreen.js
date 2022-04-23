@@ -13,8 +13,7 @@ import Google from '../Shared/Google';
 import Twitter from '../Shared/Twitter';
 import AccountInput from './AccountInput.js';
 import NavBar from '../Shared/NavBar';
-import PasswordInput from './PasswordInput.js';
-import ContinueButton from './ContinueButton.js';
+
 
 // Styling
 import styles from '../Styles'
