@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import Header from '../Shared/Header';
 import LogoBackButton from '../Shared/LogoBackButton';
 import Tabs from '../Shared/Tabs';
+
 import BackButton from '../Shared/BackButton';
 import Google from '../Shared/Google';
 import Twitter from '../Shared/Twitter';
