@@ -46,8 +46,9 @@ export default function AccountInput({ navigation }){
 
   })
   .catch(function (error) {
-    console.log('error sending login', error);
-    console.log(error.response.data)
+    // console.log('error sending login', error);
+    // console.log(error.response.data)
+    alert('Unable to log in,')
   });
 
 
