@@ -6,14 +6,13 @@ import { connect } from 'react-redux';
 
 import PetPixLogo from '../../../Templates/PetPixLogo';
 import Tabs from '../Shared/Tabs';
-import BackButton from '../Shared/BackButton';
-import Google from './Google';
-import Twitter from '../Shared/Twitter';
 
+import Google from '../Shared/Google';
+import Twitter from '../Shared/Twitter';
+import BackButton from '../Shared/BackButton';
 
 import AccountInput from './AccountInput.js';
-import PasswordInput from './PasswordInput.js';
-import ContinueButton from './ContinueButton.js';
+
 import Logo from '../../../assets/logo_small.png';
 
 
