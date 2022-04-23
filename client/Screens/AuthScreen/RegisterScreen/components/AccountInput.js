@@ -9,14 +9,15 @@ import { containsUpperCase, containsNumber, containsSpecial } from '../registerH
 import { authLog } from '../../../../Redux/actions';
 import { lightTheme, darkTheme } from '../../../../constants';
 import { useFonts } from "expo-font";
+import { palette } from '../../../../Utils/ColorScheme';
 
 const registrationEndpoint = `http://${API_IP}/user/addNewUser`;
 
 export default function AccountInput() {
   const state = useSelector(state => state);
   const screen = useSelector(state => state.authScreen);
-  const theme = useSelector(state => state.theme);
   const dispatch = useDispatch();
+  let theme = palette(state.theme);
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -29,13 +30,6 @@ export default function AccountInput() {
   const [passwordCaptial, setPasswordCapital] = useState(<></>);
   const [passwordNum, setPasswordNum] = useState(<></>);
   const [passwordSpecial, setPasswordSpecial] = useState(<></>);
-  const [current, setCurrent] = useState(() => {
-    if (theme) {
-      return lightTheme;
-    } else {
-      return darkTheme;
-    }
-  });
 
   const [fontsLoaded] = useFonts({
     comicSans: require('../../../../assets/fonts/comic.ttf')
@@ -147,21 +141,21 @@ export default function AccountInput() {
     <View style={styles.registerFields}>
       <Text style={styles.fieldLabels}>Username</Text>
       <TextInput
-        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
+        style={[{ borderColor: theme.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-username"
         onChangeText={text => setUsername(text)}
         autoCapitalize="none"
       />
       <Text style={styles.fieldLabels}>Email Address</Text>
       <TextInput
-        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
+        style={[{ borderColor: theme.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-email"
         onChangeText={text => setEmail(text)}
         autoCapitalize="none"
       />
       <Text style={styles.fieldLabels}>Password</Text>
       <TextInput
-        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
+        style={[{ borderColor: theme.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-pw1"
         onChangeText={text => setPassword(text)}
         secureTextEntry={true}
@@ -169,7 +163,7 @@ export default function AccountInput() {
       />
       <Text style={styles.fieldLabels}>Password Again</Text>
       <TextInput
-        style={[{ borderColor: current.buttonBorderColor }, styles.field]}
+        style={[{ borderColor: theme.buttonBorderColor }, styles.field]}
         accessibilityLabel="reg-pw2"
         onChangeText={text => setConfirmPw(text)}
         secureTextEntry={true}
@@ -179,12 +173,12 @@ export default function AccountInput() {
         <Pressable
           title={'Sign Up'}
           style={[
-            { backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor },
+            { backgroundColor: theme.buttonColor, borderColor: theme.buttonBorderColor },
             styles.button
           ]}
           onPress={() => handleSignUp()}>
           <Text
-            style={[{ color: current.tabIconInactive }, styles.buttonText]}>
+            style={[{ color: theme.tabIconInactive }, styles.buttonText]}>
             Sign Up
           </Text>
         </Pressable>

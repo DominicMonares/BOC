@@ -12,6 +12,7 @@ import styles from './Styles'
 import { lightTheme, darkTheme } from '../../../constants';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
+import { palette } from '../../../Utils/ColorScheme';
 
 const twitterRegEndpoint = `http://${API_IP}/user/auth/twitter`;
 
@@ -20,15 +21,7 @@ WebBrowser.maybeCompleteAuthSession();
 export default function Twitter() {
   const state = useSelector(state => state);
   const authScreen = useSelector(state => state.authScreen);
-  const theme = useSelector(state => state.theme);
-  const [current, setCurrent] = useState(() => {
-    if (theme) {
-      return lightTheme;
-    } else {
-      return darkTheme;
-    }
-  });
-
+  let theme = palette(state.theme);
   const [screen, setScreen] = useState(() => {
     if (authScreen === 'login') {
       return 'Sign In';
@@ -60,7 +53,7 @@ export default function Twitter() {
   return (
     <View style={styles.twitterContainer}>
       <Pressable
-        style={[{ backgroundColor: current.buttonColor, borderColor: current.buttonBorderColor }, styles.socialButton]}
+        style={[{ backgroundColor: theme.buttonColor, borderColor: theme.buttonBorderColor }, styles.socialButton]}
         title="Register with Twitter"
         accessibilityLabel="twitter"
         onPress={ () => _openAuthSessionAsync() }>
@@ -69,10 +62,10 @@ export default function Twitter() {
           <FontAwesome5
             name='twitter'
             size={30}
-            color={current.iconColor}
+            color={theme.iconColor}
           />
           <Text
-            style={[{ color: current.tabIconInactive }, styles.socialText]}>
+            style={[{ color: theme.tabIconInactive }, styles.socialText]}>
             &nbsp;&nbsp;{screen} with Twitter
           </Text>
         </View>

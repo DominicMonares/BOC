@@ -6,7 +6,8 @@ export default StyleSheet.create({
     borderBottomWidth: 1
   },
   loginBar: {
-    height: 90
+    height: 90,
+    borderTopWidth: 1
   },
   icon: {
     flex: 1,

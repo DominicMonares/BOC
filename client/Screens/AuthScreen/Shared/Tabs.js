@@ -6,17 +6,12 @@ import { lightTheme, darkTheme } from '../../../constants';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import styles from './Styles';
+import { palette } from '../../../Utils/ColorScheme';
 
 export default function Tabs() {
-  const theme = useSelector(state => state.theme);
+  const state = useSelector(state => state);
   const authScreen = useSelector(state => state.authScreen);
-  const [current, setCurrent] = useState(() => {
-    if (theme) {
-      return lightTheme;
-    } else {
-      return darkTheme;
-    }
-  });
+  let theme = palette(state.theme);
 
   const [lines, setLines] = useState(() => {
     if (authScreen === 'login') {
