@@ -35,7 +35,7 @@ export default function AccountInput() {
   const [passwordCaptial, setPasswordCapital] = useState('');
   const [passwordNum, setPasswordNum] = useState('');
   const [passwordSpecial, setPasswordSpecial] = useState('');
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState('');
 
   const [fontsLoaded] = useFonts({
     comicSans: require('../../../../assets/fonts/comic.ttf')
@@ -62,7 +62,12 @@ export default function AccountInput() {
         alert('Registration failed.');
       }
     } else {
-      alert(errorMessages())
+      errorMessages();
+      if (!errorMessages()) {
+        alert('Error validating information.');
+      } else {
+        alert(errorMessages());
+      }
     }
   }
 
@@ -85,7 +90,7 @@ export default function AccountInput() {
       setInvalidUsername('');
       return true;
     } else {
-      setInvalidUsername('Username must be between 2 and 16 characters long.');
+      setInvalidUsername('• Username must be between 2 and 16 characters long.');
       return false;
     }
   }
