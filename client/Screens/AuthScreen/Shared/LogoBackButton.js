@@ -1,6 +1,11 @@
+// React-Native
 import { View } from 'react-native';
+
+// Components
 import HeaderTemplate from '../../../Templates/HeaderTemplate'; // Logo
 import BackButton from './BackButton';
+
+// Styling
 import styles from './Styles';
 
 export default function LogoBackButton() {

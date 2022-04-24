@@ -1,15 +1,20 @@
+// React | React-Native
 import { useState } from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
 
+// Redux
+import { useSelector, useDispatch } from 'react-redux';
+import { authLog } from '../../../../Redux/actions';
+
+// Styling
 import styles from '../../Styles';
 import { API_IP } from '../../../../constants.js';
-import { containsUpperCase, containsNumber, containsSpecial } from '../registerHelpers';
-import { authLog } from '../../../../Redux/actions';
 import { lightTheme, darkTheme } from '../../../../constants';
 import { useFonts } from "expo-font";
 import { palette } from '../../../../Utils/ColorScheme';
+
+import axios from 'axios';
+import { containsUpperCase, containsNumber, containsSpecial } from '../registerHelpers';
 
 const registrationEndpoint = `http://${API_IP}/user/addNewUser`;
 
@@ -30,8 +35,7 @@ export default function AccountInput() {
   const [passwordCaptial, setPasswordCapital] = useState('');
   const [passwordNum, setPasswordNum] = useState('');
   const [passwordSpecial, setPasswordSpecial] = useState('');
-
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState('');
 
   const [fontsLoaded] = useFonts({
     comicSans: require('../../../../assets/fonts/comic.ttf')
@@ -58,7 +62,12 @@ export default function AccountInput() {
         alert('Registration failed.');
       }
     } else {
-      alert(errorMessages())
+      errorMessages();
+      if (!errorMessages()) {
+        alert('Error validating information.');
+      } else {
+        alert(errorMessages());
+      }
     }
   }
 
@@ -81,7 +90,7 @@ export default function AccountInput() {
       setInvalidUsername('');
       return true;
     } else {
-      setInvalidUsername('Username must be between 2 and 16 characters long.');
+      setInvalidUsername('• Username must be between 2 and 16 characters long.');
       return false;
     }
   }

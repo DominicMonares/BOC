@@ -1,7 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // import { } from 'react-native';
 
-
 // Only used for testing, revert for production
 // import { AsyncStorage } from 'react-native';
 
@@ -24,7 +23,7 @@ export const getLocally = async (key) => {
 export const removeLocally = async (key) => {
   try {
     return await AsyncStorage.removeItem(key)
-  } catch (e) {
+  } catch (err) {
     throw (err)
   }
 }

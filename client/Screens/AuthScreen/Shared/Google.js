@@ -1,18 +1,24 @@
+// React | React-Native
 import { useState } from 'react';
 import { Alert, Pressable, Text, View } from 'react-native';
+
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
+import { login } from '../../../Redux/actions';
+
+// Web Browser
 import * as Linking from 'expo-linking';
 import * as WebBrowser from 'expo-web-browser';
-import axios from 'axios';
-
-import { login } from '../../../Redux/actions';
 import { API_IP } from '../../../constants.js';
 
+// Styling
 import styles from './Styles'
 import { lightTheme, darkTheme } from '../../../constants';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 import { palette } from '../../../Utils/ColorScheme';
+
+import axios from 'axios';
 
 const googleRegEndpoint = `http://54.215.206.56.nip.io/oauth2/redirect/google`;
 
