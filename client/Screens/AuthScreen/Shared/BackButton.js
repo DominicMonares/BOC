@@ -1,8 +1,11 @@
+// React | Redux
 import { Text, View } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { guestHome } from '../../../Redux/actions';
-import { lightTheme, darkTheme } from '../../../constants';
+
+// Styling
 import styles from './Styles';
+import { lightTheme, darkTheme } from '../../../constants';
 import { useFonts } from "expo-font";
 import { palette } from '../../../Utils/ColorScheme';
 

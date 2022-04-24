@@ -1,15 +1,20 @@
+// React | React-Native
 import { useState } from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
 
+// Redux
+import { useSelector, useDispatch } from 'react-redux';
+import { authLog } from '../../../../Redux/actions';
+
+// Styling
 import styles from '../../Styles';
 import { API_IP } from '../../../../constants.js';
-import { containsUpperCase, containsNumber, containsSpecial } from '../registerHelpers';
-import { authLog } from '../../../../Redux/actions';
 import { lightTheme, darkTheme } from '../../../../constants';
 import { useFonts } from "expo-font";
 import { palette } from '../../../../Utils/ColorScheme';
+
+import axios from 'axios';
+import { containsUpperCase, containsNumber, containsSpecial } from '../registerHelpers';
 
 const registrationEndpoint = `http://${API_IP}/user/addNewUser`;
 

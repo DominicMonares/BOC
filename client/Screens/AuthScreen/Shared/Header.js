@@ -1,7 +1,10 @@
+// React-Native | Redux
 import { View } from "react-native";
 import { useSelector } from 'react-redux';
-import { lightTheme, darkTheme } from '../../../constants';
+
+// Styling
 import styles from './Styles';
+import { lightTheme, darkTheme } from '../../../constants';
 import { palette } from '../../../Utils/ColorScheme';
 
 export default function Header() {

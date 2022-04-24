@@ -1,11 +1,16 @@
+// React | React-Native
 import { useState } from 'react';
 import { Text, View } from 'react-native';
+
+// Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { authLog, authReg } from '../../../Redux/actions';
+
+// Styles
+import styles from './Styles';
 import { lightTheme, darkTheme } from '../../../constants';
 import { FontAwesome5 } from "@expo/vector-icons";
 import { useFonts } from "expo-font";
-import styles from './Styles';
 import { palette } from '../../../Utils/ColorScheme';
 
 export default function Tabs() {
