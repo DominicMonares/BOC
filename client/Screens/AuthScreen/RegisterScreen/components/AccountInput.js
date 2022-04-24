@@ -35,7 +35,6 @@ export default function AccountInput() {
   const [passwordCaptial, setPasswordCapital] = useState('');
   const [passwordNum, setPasswordNum] = useState('');
   const [passwordSpecial, setPasswordSpecial] = useState('');
-
   const [errors, setErrors] = useState([]);
 
   const [fontsLoaded] = useFonts({
