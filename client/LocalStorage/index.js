@@ -24,7 +24,7 @@ export const getLocally = async (key) => {
 export const removeLocally = async (key) => {
   try {
     return await AsyncStorage.removeItem(key)
-  } catch (e) {
+  } catch (err) {
     throw (err)
   }
 }
